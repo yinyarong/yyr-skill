@@ -1,0 +1,32 @@
+{
+  "skill_name": "english_url_learning",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I want to study English from this YouTube video about Claude Code Agent Teams: https://youtu.be/vDVSGVpB2vc. The transcript has already been downloaded and cleaned — it's at evals/files/transcript_clean.txt. Please follow the skill's workflow and generate video_notes.md in the current directory.",
+      "expected_output": "A video_notes.md file with Part 1 containing at least 15 English expressions (each with Expression, Meaning, Example, and In the video fields), and Part 2 containing a structured content summary of the video's technical subject.",
+      "files": ["evals/files/transcript_clean.txt"],
+      "expectations": [
+        "video_notes.md is created",
+        "Part 1 contains at least 15 numbered expression entries",
+        "Each expression entry has all four fields: Expression, Meaning, Example, and 'In the video'",
+        "The 'In the video' quotes are drawn from the transcript (e.g. words like 'agent', 'teammate', 'shoot off', 'token', 'QA' appear in quotes)",
+        "Part 2 is present and contains numbered ### section headings",
+        "The header includes the source URL https://youtu.be/vDVSGVpB2vc"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Make me English learning notes from this tech video. Clean transcript is at evals/files/transcript_clean.txt. The video is https://youtu.be/vDVSGVpB2vc — it's about Claude Code agent teams. Output to video_notes.md.",
+      "expected_output": "A correctly structured video_notes.md. Expressions should be informal/idiomatic (not obvious vocabulary), examples should be original sentences unrelated to Claude/AI, and the content summary should use tables or structured lists where appropriate.",
+      "files": ["evals/files/transcript_clean.txt"],
+      "expectations": [
+        "video_notes.md is created",
+        "Part 1 expressions are idiomatic or colloquial (e.g. 'spin up', 'burn through', 'under the hood', 'from the jump') rather than plain technical vocabulary",
+        "Each Example sentence is set in a scenario unrelated to Claude or AI agents",
+        "Part 2 uses at least one markdown table",
+        "Entry separators (---) appear between every expression in Part 1"
+      ]
+    }
+  ]
+}
